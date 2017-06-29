@@ -1,0 +1,22 @@
+<% if rk_items.present? %>
+  <div class="row">
+    <div class="item">
+      <h4>楽天検索結果</h4>
+      <% rk_items.each do |rk_item| %>
+        <div class="col-md-6 col-sm-10">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <img src="<%= rk_item.rk_image_url %>", alt="">
+            </div>
+            <div class="panel-body">
+              <p class="item-title"><%= rk_item.rk_name %></p>
+              <%= radio_button_tag('rk', rk_item.rk_code) %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+<% end %>
+
+<%= javascript_include_tag 'rk_items' %>

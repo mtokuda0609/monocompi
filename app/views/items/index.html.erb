@@ -1,0 +1,28 @@
+<div class="row">
+  <h2>比較アイテムリスト</h2>
+  <div>
+    <%= link_to 'アイテム追加', new_item_path, class: 'btn btn-primary' %>
+  </div>
+  <div>
+    <table class="table table-border">
+      <tr>
+        <th>アイテム名</th>
+        <th>楽天価格</th>
+        <th>Yショッピング価格</th>
+        <th>利益</th>
+        <th>所有数</th>
+        <th>詳細</th>
+      </tr>
+      <% @items.each do |item| %>
+        <tr>
+          <td><%= item.name %></td>
+          <td class="text-left">￥<%= item.rk_price %></td>
+          <td class="text-left">￥<%= item.ys_price %></td>
+          <td class="text-left">￥<%= item.benefit %></td>
+          <td class="text-left"><%= item.stock %></td>
+          <td><%= link_to '詳細', item_path(item) %></td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+<% if ys_items.present? %>
+  <div class="row">
+    <div class="item">
+      <h4>Yahoo ショッピング検索結果</h4>
+      <% ys_items["ResultSet"]["totalResultsReturned"].times do |i| %>
+        <div class="col-md-6 col-sm-10">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <img src="<%= ys_items["ResultSet"]["0"]["Result"]["#{i}"]["Image"]["Medium"] %>", alt="">
+            </div>
+            <div class="panel-body">
+              <p class="item-title"><%= ys_items["ResultSet"]["0"]["Result"]["#{i}"]["Name"] %></p>
+              <%= radio_button_tag('ys', ys_items["ResultSet"]["0"]["Result"]["#{i}"]["Code"]) %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+<% end %>
+
+<%= javascript_include_tag 'ys_items' %>

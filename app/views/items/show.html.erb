@@ -1,0 +1,45 @@
+<div>
+  <h3>アイテム詳細</h3>
+  <%= link_to '戻る', items_path %>
+  <%= link_to '削除', @item, method: :delete, data: {confirm: '本当に削除しますか？'}, class: 'btn btn-danger' %>
+</div>
+
+<div>
+  <table class="table table-border">
+    <tr>
+      <th>アイテム名</th>
+      <th>楽天価格</th>
+      <th>Yショッピング価格</th>
+      <th>利益</th>
+      <th>所有数</th>
+    </tr>
+    <tr>
+      <td><%= @item.name%></td>
+      <td>￥<%= @item.rk_price%></td>
+      <td>￥<%= @item.ys_price%></td>
+      <td>￥<%= @item.benefit%></td>
+      <td><%= @item.stock%></td>
+    </tr>
+  </table>
+</div>
+
+<div class="col-md-6 col-sm-10">
+  <div class="panel panel-default  rk-search">
+    <div class="panel-heading">
+      <img src="<%= @item.rk_image_url %>", alt="">
+    </div>
+    <div class="panel-body">
+      <p class="item-title"><%= @item.rk_name %></p>
+      <p class="item-price">￥<%= @item.rk_price %></p>
+    </div>
+  </div>
+  <div class="panel panel-default ys-search">
+    <div class="panel-heading">
+      <img src="<%= @item.ys_image_url %>", alt="">
+    </div>
+    <div class="panel-body">
+      <p class="item-title"><%= @item.ys_name %></p>
+      <p class="item-price">￥<%= @item.ys_price %></p>
+    </div>
+  </div>
+</div>

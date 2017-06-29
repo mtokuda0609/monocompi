@@ -1,15 +1,94 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+@charset "utf-8";
+
+/* navbar */
+.navbar {
+  background: #87cefa;
+  color: #ffffff;
+}
+
+.navbar .title {
+  font-size: 30px;
+}
+
+.navbar .menu {
+  font-size: 15px;
+}
+
+/* footer */
+footer {
+  background: #000000;
+  color: #ffffff;
+}
+
+/* toppage */
+.top-pic {
+  position: relative;
+}
+
+.top-pic p {
+  position: absolute;
+  color: white;
+  top: 50%;
+  left: 70%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  font-size: 2em;
+}
+
+.top-pic img {
+  width: 100%;
+  margin: 0;
+}
+
+.box {
+  background-color: #EEEEEE;
+  height: 200px;
+  margin: 10px;
+}
+
+
+/* item 表示 */
+.item .panel-body {
+  height: 120px;
+}
+
+.item .panel-heading {
+  height: 250px;
+}
+
+.item .panel-heading img {
+  height: 100%;
+  max-width: 100%;
+}
+
+p.item-title {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+/* 検索 */
+.rk-search {
+  width: 45%;
+  float: left;
+}
+
+.ys-search {
+  width: 45%;
+  float: right;
+}
+
+
+/* Login */
+.login-enter {
+  width: 45%;
+  float: left;
+}
+
+.login-pics {
+  width: 45%;
+  float: left;
+}
+

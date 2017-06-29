@@ -73,3 +73,6 @@ gem 'dotenv-rails'
 
 # Rakuten API
 gem 'rakuten_web_service'
+
+# Yahoo API
+gem 'yahoo-api'

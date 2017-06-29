@@ -1,0 +1,31 @@
+<h2>アイテム追加</h2>
+
+<div>
+  <%= form_for(@item) do |f| %>
+    <%= f.text_field :name, placeholder: 'アイテム名を入力してください。', class: 'form-control' %>
+    <%= f.submit '追加', class: 'btn btn-primary' %>
+    <%= f.hidden_field 'rk_code' %>
+    <%= f.hidden_field 'ys_code' %>
+  <% end %>
+</div>
+
+<div class="row">
+  <div>
+    <%= form_tag(new_item_path, method: :get, class: 'form-inline') do %>
+      <div class="form-group">
+        <%= text_field_tag :keyword, @rk_keyword, class: 'form-control', placeholder: "キーワードを入力", size: 40 %>
+      </div>
+      <%= submit_tag '検索', class: 'btn btn-primary' %>
+    <% end %>
+  </div>
+  
+  <div class="text-left rk-search">
+    <%= render 'rkitems', rk_items: @rk_items %>
+  </div>
+
+  <div class="text-left ys-search">
+    <%= render 'ysitems', ys_items: @ys_items %>
+  </div>
+
+</div>
+
