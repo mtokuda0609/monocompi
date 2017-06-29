@@ -47,6 +47,20 @@ footer {
   margin: 10px;
 }
 
+.top-icon {
+  margin: 10px;
+}
+
+.pickup-items {
+  width: 45%;
+  float: left;
+}
+
+.monthly-result {
+  width: 45%;
+  float: right;
+}
+
 
 /* item 表示 */
 .item .panel-body {

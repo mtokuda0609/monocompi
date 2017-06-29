@@ -1,9 +1,15 @@
 <% if logged_in? %>
-  <div>
-    Pickup Items
+  <div class="pickup-items">
+    <h3>Pickup Items</h3>
+    <p>----------------</p>
+    <p>---工事中---</p>
+    <p>----------------</p>
   </div>
-  <div>
-    今月の成績
+  <div class="monthly-result">
+    <h3>今月の成績</h3>
+    <p>----------------</p>
+    <p>---工事中---</p>
+    <p>----------------</p>
   </div>
 <% else %>
   <div class="container">
@@ -21,25 +27,19 @@
       <h5>概要説明</h5>
     </div>
     <div class="text-center">
-      <div class="box col-md-3 col-sm-4 col-xs-12">
-        <img src="" alt="">
+      <div class="box col-md-3 col-sm-4 col-xs-6">
+        <div class="top-icon">
+          <img src="/images/top_icon01.JPG" alt="" width="50%">
+        </div>
         <p>mono Compi ! の機能１</p>
         <p>サイトごとのモノの価格の比較</p>
       </div>
-      <div class="box col-md-3 col-sm-4 col-xs-12">
-        <img src="" alt="">
+      <div class="box col-md-3 col-sm-4 col-xs-6">
+        <div class="top-icon">
+          <img src="/images/top_icon02.JPG" alt="" width="50%">
+        </div>
         <p>mono Compi ! の機能２</p>
         <p>月別の売上・利益目標の設定と予実分析</p>
-      </div>
-      <div class="box col-md-3 col-sm-4 col-xs-12">
-        <img src="" alt="">
-        <p>mono Compi ! の機能３</p>
-        <p>xxxx</p>
-      </div>
-      <div class="box col-md-3 col-sm-4 col-xs-12">
-        <img src="" alt="">
-        <p>mono Compi ! の機能４</p>
-        <p>xxxx</p>
       </div>
     </div>
   </div>

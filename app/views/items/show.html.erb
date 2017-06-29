@@ -23,8 +23,9 @@
   </table>
 </div>
 
-<div class="col-md-6 col-sm-10">
-  <div class="panel panel-default  rk-search">
+<div class="col-md-6 col-sm-10 rk-search">
+  <p>楽天商品</p>
+  <div class="panel panel-default">
     <div class="panel-heading">
       <img src="<%= @item.rk_image_url %>", alt="">
     </div>
@@ -33,7 +34,10 @@
       <p class="item-price">￥<%= @item.rk_price %></p>
     </div>
   </div>
-  <div class="panel panel-default ys-search">
+</div>
+<div class="col-md-6 col-sm-10 ys-search">
+  <p>Yahooショッピング商品</p>
+  <div class="panel panel-default">
     <div class="panel-heading">
       <img src="<%= @item.ys_image_url %>", alt="">
     </div>
